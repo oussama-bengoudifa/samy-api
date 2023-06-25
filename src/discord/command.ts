@@ -4,13 +4,13 @@ import { Message } from 'discord.js';
 import axios from 'axios';
 
 @Command({
-  name: 'hello',
+  name: 'command',
   description: 'Return Hello world',
 })
 @Injectable()
-export class BotGateway {
+export class CommandBot {
   @Handler()
-  async hello(message: Message): Promise<void> {
+  async command(message: Message): Promise<void> {
     try {
       const response = await axios.get(
         'https://coffee.alexflipnote.dev/random.json',
